@@ -1,0 +1,434 @@
+/* ================================================
+   GLOBAL
+================================================ */
+body {
+    margin: 0;
+    background: #F3EEFF;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* ================================================
+   LAYOUT SHARED: SIDEBAR & MAIN
+================================================ */
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 70px;
+    background: #ffffff;
+    height: 100vh;
+    padding-top: 40px;
+    box-shadow: 2px 0 10px rgba(120, 100, 200, 0.15);
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 35px 0;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar ul li img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar ul li img:hover {
+    opacity: 1;
+}
+
+.main {
+    padding: 40px 50px;
+    flex: 1;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #6C5ABF;
+}
+
+/* ================================================
+   LOGIN PAGE
+================================================ */
+.login-bg {
+    background: #F3EEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    background: #ffffff;
+    width: 900px;
+    min-height: 520px;
+    display: flex;
+    border-radius: 18px;
+    box-shadow: 0px 4px 20px rgba(160, 140, 255, 0.25);
+    overflow: hidden;
+}
+
+.login-left {
+    width: 45%;
+    background: #F8F4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.login-left img {
+    width: 95%;
+    object-fit: contain;
+}
+
+.divider {
+    width: 1px;
+    background: #DDCCFF;
+}
+
+.login-right {
+    flex: 1;
+    padding: 45px 60px;
+}
+
+.login-right h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #6C5ABF;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #6C5ABF;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #C9BFFF;
+    margin-bottom: 15px;
+    background: #FBF9FF;
+}
+
+input:focus {
+    outline: none;
+    border-color: #B8A4FF;
+    box-shadow: 0 0 4px rgba(184, 164, 255, 0.6);
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #7F6BF2;
+    text-decoration: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #594894;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #A592FF;
+}
+
+/* OR divider */
+.or-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.or-container hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #DDCCFF;
+}
+
+.or-container span {
+    margin: 0 10px;
+    color: #9C8BDF;
+    font-size: 14px;
+}
+
+/* Social buttons */
+.social-row {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 14px 0;
+    background: white;
+    border-radius: 12px;
+    border: 1.8px solid #C9BFFF;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 16px;
+
+    display: flex;              /* supaya ikon + teks rata */
+    align-items: center;        /* vertikal tengah */
+    justify-content: center;    /* teks + ikon di tengah */
+    gap: 8px;    
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+.btn-social:hover {
+    background: #F3EEFF;
+}
+
+.google-btn {
+    border-color: #B8A4FF;
+}
+
+.facebook-btn {
+    border-color: #A592FF;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #6C5ABF;
+}
+
+.signup-text a {
+    color: #7F6BF2;
+    text-decoration: none;
+}
+
+.error-msg {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ================================================
+   DASHBOARD PAGE
+================================================ */
+.card-container {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    width: 250px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(150, 120, 255, 0.15);
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(160, 91, 194, 0.25);
+}
+
+.card-icon {
+    width: 40px;
+    opacity: 0.85;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 15px;
+    color: #7F6BF2;
+    margin-bottom: 6px;
+}
+
+.card-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4337A6;
+}
+
+.view-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #594894;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.view-btn:hover {
+    background: #8c5abe;
+}
+
+/* ================================================
+   PRODUCTS PAGE
+================================================ */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(150, 120, 255, 0.15);
+}
+
+.table th {
+    background: #B8A4FF;
+    color: #fff;
+    padding: 14px;
+    text-align: left;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #E3DAFF;
+    color: #4A3CBF;
+}
+
+.table tr:hover td {
+    background: #F7F3FF;
+}
+
+/* STOCK + ACTION ICONS */
+.stock-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stock-number {
+    font-weight: bold;
+    color: #4A3CBF;
+}
+
+.icon-btn {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: 0.2s;
+}
+
+.icon-btn:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* =====================================================
+   RESPONSIVE (MOBILE)
+===================================================== */
+@media (max-width: 768px) {
+
+    /* Background login */
+    .login-bg {
+        padding: 20px;
+        height: auto;
+    }
+
+    /* Login wrapper jadi kolom */
+    .login-wrapper {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+    }
+
+    .login-left {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-left img {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .login-right {
+        width: 100%;
+        padding: 25px 30px;
+    }
+
+    .social-row {
+        flex-direction: column;
+    }
+
+    .btn-social {
+        width: 100%;
+    }
+
+    /* TABLE RESPONSIVE */
+    .table {
+        font-size: 13px;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 55px;
+    }
+
+    .sidebar ul li img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .main {
+        margin-left: 70px;
+        padding: 25px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

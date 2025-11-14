@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - UTS Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-bg">
+
+<div class="login-wrapper">
+
+    <!-- KIRI - GAMBAR -->
+    <div class="login-left">
+        <img src="img/login-illustration.png" alt="Login Illustration">
+    </div>
+
+    <!-- GARIS PEMISAH -->
+    <div class="divider"></div>
+
+    <!-- KANAN - FORM -->
+    <div class="login-right">
+
+        <h1>Welcome Back!</h1>
+
+        <form id="loginForm">
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+
+            <a class="forgot" href="#">Forgot Password?</a>
+
+            <button type="submit" class="btn-login">Login</button>
+
+            <div class="or-container">
+                <hr><span>OR</span><hr>
+            </div>
+
+            <!-- GOOGLE & FACEBOOK SEBELAHAN -->
+            <div class="social-row">
+                <button type="button" class="btn-social google-btn">
+                    <img src="img/google.png" class="social-icon"> Google
+                </button>
+
+                <button type="button" class="btn-social facebook-btn">
+                    <img src="img/facebook.png" class="social-icon"> Facebook
+                </button>
+
+            </div>
+
+        </form>
+
+        <p class="signup-text">
+            Don’t have an account? <a href="#">Sign Up</a>
+        </p>
+
+        <p id="errorMsg" class="error-msg"></p>
+    </div>
+
+</div>
+
+<!-- Script Login -->
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const pass  = document.getElementById("password").value.trim();
+    const err   = document.getElementById("errorMsg");
+
+    // Validasi input kosong
+    if(email === "" || pass === ""){
+        err.textContent = "Email dan password harus diisi!";
+        return;
+    }
+
+    // Login yang diperbolehkan
+    const validEmail = "vaenamiftakhurrisko@gmail.com";
+    const validPassword = "24090100";
+
+    // Cek apakah cocok
+    if (email === validEmail && pass === validPassword) {
+        alert("Login berhasil!");
+        window.location.href = "dashboard.html";
+    } else {
+        err.textContent = "Email atau password salah!";
+    }
+});
+</script>
+
+
+</body>
+</html>

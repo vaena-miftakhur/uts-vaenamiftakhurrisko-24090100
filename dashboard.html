@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <ul>
+            <li><img src="img/icon-home.jpg"></li>
+            <li><img src="img/icon-box.jpg"></li>
+            <li><img src="img/icon-sales.jpg"></li>
+            <li><img src="img/icon-revenue.png"></li>
+            <li><img src="img/icon-settings.png"></li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <h1 class="title">Dashboard</h1>
+
+        <!-- CARD CONTAINER -->
+        <div class="card-container">
+
+            <div class="card">
+                <img src="img/icon-products.png" class="card-icon">
+                <p class="card-title">Total Products</p>
+                <h2 id="totalProducts" class="card-value"></h2>
+            </div>
+
+            <div class="card">
+                <img src="img/icon-sales.jpg" class="card-icon">
+                <p class="card-title">Total Sales</p>
+                <h2 id="totalSales" class="card-value"></h2>
+            </div>
+
+            <div class="card">
+                <img src="img/icon-revenue.png" class="card-icon">
+                <p class="card-title">Total Revenue</p>
+                <h2 id="totalRevenue" class="card-value"></h2>
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button class="view-btn" onclick="goToProducts()">Lihat Data Produk</button>
+
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
