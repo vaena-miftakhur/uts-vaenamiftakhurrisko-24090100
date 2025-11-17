@@ -7,8 +7,8 @@
 ---
 
 ## 🔗 Link Penting
-- **GitHub Repository:** https://github.com/USERNAME/NAMA-REPO  
-- **GitHub Pages:** https://USERNAME.github.io/NAMA-REPO/  
+- **GitHub Repository:** https://github.com/vaena-miftakhur/uts-vaenamiftakhurrisko-24090100
+- **GitHub Pages:** https://vaena-miftakhur.github.io/uts-vaenamiftakhurrisko-24090100/
 
 
 
