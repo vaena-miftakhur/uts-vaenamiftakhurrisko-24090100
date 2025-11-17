@@ -1,30 +1,39 @@
-/* ===========================
-   LOGIN PAGE
-=========================== */
-if (document.getElementById("loginForm")) {
+// --------------------------------------------------
+// LOGIN PAGE
+// --------------------------------------------------
 
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("loginForm");
 
-        const email = document.getElementById("email").value.trim();
-        const pass  = document.getElementById("password").value.trim();
-        const error = document.getElementById("errorMsg");
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        if (email === "" || pass === "") {
-            error.textContent = "Email dan password harus diisi!";
-            return;
-        }
+            const email = document.getElementById("email").value.trim();
+            const pass = document.getElementById("password").value.trim();
+            const err = document.getElementById("errorMsg");
 
-        alert("Login berhasil!");
-        window.location.href = "dashboard.html";
-    });
-}
+            if (email === "" || pass === "") {
+                err.textContent = "Email dan password harus diisi!";
+                return;
+            }
 
+            const validEmail = "vaenamiftakhurrisko@gmail.com";
+            const validPassword = "24090100";
 
+            if (email === validEmail && pass === validPassword) {
+                alert("Login berhasil!");
+                window.location.href = "dashboard.html";
+            } else {
+                err.textContent = "Email atau password salah!";
+            }
+        });
+    }
+});
 
-/* ===========================
-   DASHBOARD SUMMARY
-=========================== */
+// --------------------------------------------------
+// DASHBOARD DATA
+// --------------------------------------------------
 
 const summary = {
     totalProducts: 120,
@@ -39,15 +48,9 @@ if (document.getElementById("totalProducts")) {
         "Rp " + summary.totalRevenue.toLocaleString();
 }
 
-function goToProducts() {
-    window.location.href = "products.html";
-}
-
-
-
-/* ===========================
-   PRODUCTS PAGE
-=========================== */
+// --------------------------------------------------
+// PRODUCT LIST
+// --------------------------------------------------
 
 const products = [
     { id: 1, name: "Kopi Gayo", price: 25000, stock: 50 },
@@ -55,37 +58,34 @@ const products = [
     { id: 3, name: "Coklat Aceh", price: 30000, stock: 20 }
 ];
 
-if (document.getElementById("productTable")) {
+const tableBody = document.querySelector("#productTable tbody");
 
-    const tbody = document.getElementById("productTable");
-
+if (tableBody) {
     products.forEach((p, i) => {
+        const tr = document.createElement("tr");
 
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
+        tr.innerHTML = `
             <td>${i + 1}</td>
             <td>${p.name}</td>
-            <td>Rp ${p.price.toLocaleString()}</td>
+            <td>${p.price.toLocaleString()}</td>
+            <td>${p.stock}</td>
 
-            <!-- STOCK + ICONS JADI 1 KOLOM -->
             <td class="stock-action">
-                <span class="stock-number">${p.stock}</span>
-                <img src="img/icon-edit.png" class="icon-btn" onclick="editProduct(${p.id})">
-                <img src="img/icon-delete.png" class="icon-btn" onclick="deleteRow(this)">
+                <img src="img/icon-edit.png" class="icon-btn" onclick="editProduct('${p.name}')">
+                <img src="img/icon-delete.png" class="icon-btn" onclick="deleteProduct(this)">
             </td>
         `;
 
-        tbody.appendChild(row);
+        tableBody.appendChild(tr);
     });
 }
 
-function editProduct(id) {
-    alert("Edit produk ID: " + id);
+function editProduct(name) {
+    alert("Edit produk: " + name);
 }
 
-function deleteRow(element) {
-    if (confirm("Yakin ingin menghapus produk ini?")) {
-        element.closest("tr").remove();
+function deleteProduct(btn) {
+    if (confirm("Yakin hapus produk ini?")) {
+        btn.parentElement.parentElement.remove();
     }
 }

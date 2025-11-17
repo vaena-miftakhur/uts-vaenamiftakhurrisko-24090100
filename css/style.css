@@ -1,29 +1,27 @@
 /* ================================================
-   GLOBAL
+   GLOBAL (Figma Gray Minimalist)
 ================================================ */
 body {
     margin: 0;
-    background: #F3EEFF;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #F5F5F5;
+    color: #333;
 }
 
 h1, h2, h3, p {
     margin: 0;
+    font-weight: 600;
 }
 
 /* ================================================
-   LAYOUT SHARED: SIDEBAR & MAIN
+   SIDEBAR (Tetap versi lama — putih)
 ================================================ */
-.layout {
-    display: flex;
-}
-
 .sidebar {
     width: 70px;
-    background: #ffffff;
+    background: #d0d0d0;
     height: 100vh;
-    padding-top: 40px;
-    box-shadow: 2px 0 10px rgba(120, 100, 200, 0.15);
+    padding-top: 70px;
+    box-shadow: 2px 0 10px rgba(120, 120, 120, 0.10);
     position: fixed;
 }
 
@@ -53,188 +51,178 @@ h1, h2, h3, p {
     opacity: 1;
 }
 
+/* ================================================
+   MAIN CONTENT (Dashboard & Products)
+================================================ */
 .main {
-    padding: 40px 50px;
-    flex: 1;
-    margin-left: 90px;
-    margin-top: 20px;
+    margin-left: 110px;
+    padding: 40px;
 }
 
 .title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #6C5ABF;
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 35px;
 }
 
 /* ================================================
-   LOGIN PAGE
+   LOGIN PAGE (Figma Style)
 ================================================ */
 .login-bg {
-    background: #F3EEFF;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #F5F5F5;
 }
 
 .login-wrapper {
-    background: #ffffff;
-    width: 900px;
-    min-height: 520px;
+    background: #FFFFFF;
+    width: 850px;
+    min-height: 480px;
     display: flex;
-    border-radius: 18px;
-    box-shadow: 0px 4px 20px rgba(160, 140, 255, 0.25);
+    border-radius: 14px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.07);
     overflow: hidden;
 }
 
 .login-left {
     width: 45%;
-    background: #F8F4FF;
+    background: #F7F7F7;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 20px;
 }
 
 .login-left img {
-    width: 95%;
+    width: 90%;
     object-fit: contain;
 }
 
 .divider {
     width: 1px;
-    background: #DDCCFF;
+    background: #E0E0E0;
 }
 
 .login-right {
     flex: 1;
-    padding: 45px 60px;
+    padding: 40px 50px;
 }
 
 .login-right h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #6C5ABF;
+    font-size: 26px;
+    margin-bottom: 22px;
+    color: #222;
+    font-weight: 700;
 }
 
 label {
     font-size: 14px;
-    margin-bottom: 5px;
+    color: #555;
+    margin-bottom: 6px;
     display: block;
-    color: #6C5ABF;
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #C9BFFF;
-    margin-bottom: 15px;
-    background: #FBF9FF;
+    padding: 11px;
+    border-radius: 8px;
+    border: 1px solid #D1D1D1;
+    background: #FAFAFA;
+    margin-bottom: 14px;
+    font-size: 14px;
 }
 
 input:focus {
     outline: none;
-    border-color: #B8A4FF;
-    box-shadow: 0 0 4px rgba(184, 164, 255, 0.6);
+    border-color: #A0A0A0;
+    box-shadow: 0 0 4px rgba(150,150,150,0.3);
 }
 
 .forgot {
     display: block;
     text-align: right;
     font-size: 13px;
-    margin-bottom: 15px;
-    color: #7F6BF2;
     text-decoration: none;
+    color: #7A7A7A;
+    margin-bottom: 18px;
 }
 
 .btn-login {
     width: 100%;
-    padding: 12px;
-    background: #594894;
+    padding: 11px;
+    background: #E5E5E5;
     border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
+    color: #333;
 }
 
 .btn-login:hover {
-    background: #A592FF;
+    background: #D5D5D5;
 }
 
-/* OR divider */
+/* OR Divider */
 .or-container {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 18px 0;
 }
 
 .or-container hr {
     flex: 1;
     border: none;
-    border-top: 1px solid #DDCCFF;
+    border-top: 1px solid #DCDCDC;
 }
 
 .or-container span {
     margin: 0 10px;
-    color: #9C8BDF;
+    color: #666;
     font-size: 14px;
 }
 
-/* Social buttons */
+/* Social Buttons */
 .social-row {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .btn-social {
     flex: 1;
-    padding: 14px 0;
-    background: white;
-    border-radius: 12px;
-    border: 1.8px solid #C9BFFF;
-    font-weight: 600;
+    padding: 10px 0;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #CCCCCC;
     cursor: pointer;
-    transition: 0.2s;
-    font-size: 16px;
-
-    display: flex;              /* supaya ikon + teks rata */
-    align-items: center;        /* vertikal tengah */
-    justify-content: center;    /* teks + ikon di tengah */
-    gap: 8px;    
-}
-
-.social-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    object-fit: contain;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .btn-social:hover {
-    background: #F3EEFF;
+    background: #F0F0F0;
 }
 
-.google-btn {
-    border-color: #B8A4FF;
-}
-
-.facebook-btn {
-    border-color: #A592FF;
+.social-icon {
+    width: 18px;
 }
 
 .signup-text {
     margin-top: 15px;
     font-size: 13px;
-    color: #6C5ABF;
+    color: #555;
 }
 
 .signup-text a {
-    color: #7F6BF2;
     text-decoration: none;
+    color: #333;
+    font-weight: 600;
 }
 
 .error-msg {
@@ -244,7 +232,7 @@ input:focus {
 }
 
 /* ================================================
-   DASHBOARD PAGE
+   DASHBOARD CARDS (Figma)
 ================================================ */
 .card-container {
     display: flex;
@@ -252,135 +240,129 @@ input:focus {
 }
 
 .card {
-    background: #ffffff;
-    width: 250px;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(150, 120, 255, 0.15);
+    background: #FFFFFF;
+    width: 240px;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     text-align: center;
-    transition: 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(160, 91, 194, 0.25);
 }
 
 .card-icon {
     width: 40px;
-    opacity: 0.85;
-    margin-bottom: 12px;
+    opacity: 0.8;
 }
 
 .card-title {
     font-size: 15px;
-    color: #7F6BF2;
-    margin-bottom: 6px;
+    color: #777;
+    margin-top: 12px;
 }
 
 .card-value {
     font-size: 28px;
-    font-weight: bold;
-    color: #4337A6;
+    font-weight: 700;
+    color: #333;
+    margin-top: 4px;
 }
 
 .view-btn {
     margin-top: 25px;
-    padding: 12px 25px;
-    background: #594894;
+    padding: 12px 20px;
+    background: #E5E5E5;
     border: none;
     border-radius: 10px;
     font-size: 15px;
-    color: white;
     cursor: pointer;
-    transition: 0.25s;
+    color: #333;
 }
 
 .view-btn:hover {
-    background: #8c5abe;
+    background: #D5D5D5;
 }
 
 /* ================================================
-   PRODUCTS PAGE
+   PRODUCTS TABLE (Figma Size + Center)
 ================================================ */
-.table {
+.table-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%;
+}
+
+.table {
+    width: 90%;
+    max-width: 850px;   /* Besar seperti di Figma */
     border-collapse: collapse;
-    background: white;
-    border-radius: 12px;
+    background: #FFFFFF;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 18px rgba(150, 120, 255, 0.15);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 2px solid black;
 }
 
 .table th {
-    background: #B8A4FF;
-    color: #fff;
-    padding: 14px;
+    background: #F2F2F2;
+    padding: 18px 22px;
     text-align: left;
+    color: #444;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .table td {
-    padding: 12px;
-    border-bottom: 1px solid #E3DAFF;
-    color: #4A3CBF;
+    padding: 18px 22px;
+    font-size: 16px;
+    border-bottom: 1px solid #E6E6E6;
+    color: #333;
 }
 
 .table tr:hover td {
-    background: #F7F3FF;
+    background: #FAFAFA;
 }
 
-/* STOCK + ACTION ICONS */
 .stock-action {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.stock-number {
-    font-weight: bold;
-    color: #4A3CBF;
+    gap: 14px;
 }
 
 .icon-btn {
     width: 22px;
-    height: 22px;
     cursor: pointer;
-    opacity: 0.75;
-    transition: 0.2s;
+    opacity: 0.7;
 }
 
 .icon-btn:hover {
     opacity: 1;
-    transform: scale(1.15);
 }
 
-/* =====================================================
-   RESPONSIVE (MOBILE)
-===================================================== */
+
+/* ================================================
+   RESPONSIVE
+================================================ */
 @media (max-width: 768px) {
 
-    /* Background login */
-    .login-bg {
-        padding: 20px;
-        height: auto;
+    .main {
+        margin-left: 75px;
+        padding: 25px;
     }
 
-    /* Login wrapper jadi kolom */
-    .login-wrapper {
-        width: 100%;
+    .card-container {
         flex-direction: column;
-        height: auto;
-        min-height: 0;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    .login-wrapper {
+        flex-direction: column;
+        width: 95%;
     }
 
     .login-left {
         width: 100%;
-        padding: 20px;
-    }
-
-    .login-left img {
-        width: 70%;
-        max-width: 250px;
     }
 
     .divider {
@@ -394,41 +376,5 @@ input:focus {
 
     .social-row {
         flex-direction: column;
-    }
-
-    .btn-social {
-        width: 100%;
-    }
-
-    /* TABLE RESPONSIVE */
-    .table {
-        font-size: 13px;
-    }
-
-    .table th, .table td {
-        padding: 10px;
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-        width: 55px;
-    }
-
-    .sidebar ul li img {
-        width: 26px;
-        height: 26px;
-    }
-
-    .main {
-        margin-left: 70px;
-        padding: 25px;
-    }
-
-    .card-container {
-        flex-direction: column;
-    }
-
-    .card {
-        width: 100%;
     }
 }

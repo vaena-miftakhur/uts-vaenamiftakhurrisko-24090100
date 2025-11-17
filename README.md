@@ -10,7 +10,7 @@
 - **GitHub Repository:** https://github.com/USERNAME/NAMA-REPO  
 - **GitHub Pages:** https://USERNAME.github.io/NAMA-REPO/  
 
-> *Silakan ganti USERNAME dan NAMA-REPO sesuai repository kamu.*
+
 
 ---
 
@@ -78,9 +78,9 @@ project-folder/
 │   └── script.js
 │
 └── img/
-    ├── icon-home.png / jpg
-    ├── icon-box.png / jpg
-    ├── icon-sales.png / jpg
+    ├── icon-home.png / png
+    ├── icon-box.png / png
+    ├── icon-sales.png / png
     ├── icon-revenue.png
     ├── icon-settings.png
     ├── icon-edit.png

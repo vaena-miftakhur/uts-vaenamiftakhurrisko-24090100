@@ -9,15 +9,12 @@
 
 <div class="login-wrapper">
 
-    <!-- KIRI - GAMBAR -->
     <div class="login-left">
         <img src="img/login-illustration.png" alt="Login Illustration">
     </div>
 
-    <!-- GARIS PEMISAH -->
     <div class="divider"></div>
 
-    <!-- KANAN - FORM -->
     <div class="login-right">
 
         <h1>Welcome Back!</h1>
@@ -38,16 +35,16 @@
                 <hr><span>OR</span><hr>
             </div>
 
-            <!-- GOOGLE & FACEBOOK SEBELAHAN -->
             <div class="social-row">
                 <button type="button" class="btn-social google-btn">
-                    <img src="img/google.png" class="social-icon"> Google
+                    <img src="img/google.png" class="social-icon">
+                    Google
                 </button>
 
                 <button type="button" class="btn-social facebook-btn">
-                    <img src="img/facebook.png" class="social-icon"> Facebook
+                    <img src="img/facebook.png" class="social-icon">
+                    Facebook
                 </button>
-
             </div>
 
         </form>
@@ -61,35 +58,7 @@
 
 </div>
 
-<!-- Script Login -->
-<script>
-document.getElementById("loginForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    const email = document.getElementById("email").value.trim();
-    const pass  = document.getElementById("password").value.trim();
-    const err   = document.getElementById("errorMsg");
-
-    // Validasi input kosong
-    if(email === "" || pass === ""){
-        err.textContent = "Email dan password harus diisi!";
-        return;
-    }
-
-    // Login yang diperbolehkan
-    const validEmail = "vaenamiftakhurrisko@gmail.com";
-    const validPassword = "24090100";
-
-    // Cek apakah cocok
-    if (email === validEmail && pass === validPassword) {
-        alert("Login berhasil!");
-        window.location.href = "dashboard.html";
-    } else {
-        err.textContent = "Email atau password salah!";
-    }
-});
-</script>
-
+<script src="js/script.js"></script>
 
 </body>
 </html>
