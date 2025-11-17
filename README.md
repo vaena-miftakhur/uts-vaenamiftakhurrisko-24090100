@@ -1,7 +1,7 @@
 # UTS Pemrograman Web – Sistem Dashboard & Product Management
 
 ## 👤 Identitas
-- **Nama:** Vaena Miftakhurrisko  
+- **Nama:** Vaena Miftakhur Risko  
 - **NIM:** 24090100  
 
 ---
